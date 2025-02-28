@@ -9,7 +9,8 @@
     "atom": "*"
   },
   "dependencies": {
-    "atom-select-list": "^0.7.0"
+    "atom-select-list": "^0.7.0",
+    "snyk": "^1.189.0"
   },
   "consumedServices": {
     "status-bar": {
@@ -38,5 +39,10 @@
       "default": true,
       "description": "Show the active pane item's language on the right side of Atom's status bar, instead of the left."
     }
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
