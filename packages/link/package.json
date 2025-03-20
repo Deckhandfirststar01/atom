@@ -14,7 +14,8 @@
     ]
   },
   "dependencies": {
-    "underscore-plus": "1.x"
+    "underscore-plus": "1.x",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "standard": "^10.0.3"
@@ -29,5 +30,10 @@
     "globals": [
       "atom"
     ]
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
